@@ -29,7 +29,7 @@ class Weapon:
         self.magazine.addAmmo(value, type)
 
     def addMagazine(self, magazine):
-        self.magazine.merge(magazine)
+        self.magazine.add(magazine)
 
     def emptyMagazine(self):
         return self.magazine.empty()
@@ -38,9 +38,5 @@ class Weapon:
         return self.damage
 
     def __repr__(self):
-        return f"Name : {self.name}\n" \
-               f"Th : {self.th}\n" \
-               f"Value : {self.value}\n" \
-               f"Type : {self.type}\n" \
-               f"Damage : {self.damage}\n" \
-               f"Magazine : {self.magazine.__repr__()}"
+        return f"Name : {self.name}, Th : {self.th}, Value : {self.value}, " \
+               f"Damage : {self.damage}, Magazine : {self.magazine.__repr__()}"

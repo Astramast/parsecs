@@ -26,6 +26,4 @@ class Member:
             raise ValueError("Member already dead.")
 
     def __repr__(self):
-        return f"Name : {self.name}\n" \
-               f"Vital : {self.vital}\n" \
-               f"Hp : {self.hp}"
+        return f"Name : {self.name}, Vital : {self.vital}, Hp : {self.hp}"

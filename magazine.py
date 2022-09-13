@@ -33,15 +33,12 @@ class Magazine:
         else:
             raise ValueError("Not enough ammo or energy.")
 
-    def merge(self, magazine):
+    def add(self, magazine):
         if self.type == magazine.getType():
             self.capacity += magazine.getCapacity()
             self.current_amount += magazine.empty()
-            del magazine
         else:
             raise TypeError("Magazines are not the same type !")
 
     def __repr__(self):
-        return f"Capacity : {self.capacity}\n" \
-               f"Amount : {self.current_amount}\n" \
-               f"Type : {self.type}"
+        return f"{self.current_amount}/{self.capacity} Type : {self.type}"
